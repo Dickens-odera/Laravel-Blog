@@ -10490,10 +10490,6 @@ a.text-dark:focus {
   }
 }
 
-body {
-  background-color: rgba(10, 10, 10, 0.8) !important;
-}
-
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);

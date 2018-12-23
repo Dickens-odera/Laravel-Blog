@@ -30,6 +30,6 @@ Route::get('/contact', 'PagesController@contact');//returns the contact function
 Route::get('/footer', 'PagesController@footer');
 Route::resource('posts','PostsController');
 Route::resource('news','ContentsController');
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -33,7 +33,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link" href="{{ url('/contents')}}">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url('/news')}}">News</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url('/about')}}">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url('/services')}}">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url('/team')}}">Team</a></li>
@@ -82,5 +82,9 @@
         </div>
         </main>
     </div>
+    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'article-ckeditor' );
+    </script>
 </body>
 </html>
