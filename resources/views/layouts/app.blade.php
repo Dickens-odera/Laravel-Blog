@@ -10,7 +10,6 @@
     <title>{{ config('app.name', 'Laravel Blog') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -86,6 +85,7 @@
     </div>
     <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
     <script>CKEDITOR.replace( 'article-ckeditor' );</script>
+    <script src="{{ asset('js/app.js') }}" defer></script>
 
 </body>
 </html>
