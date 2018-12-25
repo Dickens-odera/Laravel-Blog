@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" media="screen" href="{{asset('css/app.css')}}" />
 </head>
 <body>
-    <!-- @include('includes.navbar')-->
     <div class="container">
     @yield('content')
     </div>

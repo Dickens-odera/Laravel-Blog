@@ -12,7 +12,7 @@
                             <div class="card-body">
                             {{$contents->body}}
                             <p>Written on {{$contents->created_at}}</p>
-                            <a href="/contents/{{$contents->id}}" class="btn btn-lg btn-success" data-toggle="modal" data-target=".contentModal">Read More</a>
+                            <a href="/contents/{{$contents->id}}" class="btn btn-sm btn-success" data-toggle="modal" data-target=".contentModal">Read More</a>
                             </div>
                              <!--MODAL SECTION -->
  <div class="modal modal-fade contentModal" tab-index="-1" role="dialog">

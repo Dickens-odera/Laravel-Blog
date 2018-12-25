@@ -14,7 +14,7 @@ class ContentsController extends Controller
      */
     public function index()
     {
-        $contents = Contents::orderBy('created_at', 'desc')->take(4)->paginate(2);
+        $contents = Contents::orderBy('created_at', 'asc')->take(4)->paginate(2);
         return view('pages.contents')->with('content', $contents);
     }
 
