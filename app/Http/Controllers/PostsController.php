@@ -73,8 +73,8 @@ class PostsController extends Controller
             //file name to store to the database
             $fileNameToStore = $filename.'_'.time().'.'.$fileExtension; 
             //upload the image
-            //$imagePathToBoBeStored = $request->file('cover_image')->storeAs('public/cover_images',$fileNameToStore);
-            $pathToFile = Storage::disk('public')->put('uploads/', $fileNameToStore);
+            $imagePathToBoBeStored = $request->file('cover_image')->storeAs('public/cover_images',$fileNameToStore);
+            //$pathToFile = Storage::disk('public')->put('uploads/', $fileNameToStore);
 
         }
         else{

@@ -11,7 +11,7 @@
                             </div>
                             <div class="card-body">
                             {{$contents->body}}
-                            <p>Written on {{$contents->created_at}}</p>
+                            <p>Written on {{$contents->created_at}} by {{$contents->user->name}}</p>
                             <a href="/contents/{{$contents->id}}" class="btn btn-sm btn-success" data-toggle="modal" data-target=".contentModal">Read More</a>
                             </div>
                              <!--MODAL SECTION -->

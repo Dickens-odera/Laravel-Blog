@@ -13,7 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                   <a href="{{url('/posts/create')}}" class="btn btn-primary btn-sm">Create Post</a>     
+                   <a href="{{url('/posts/create')}}" class="btn btn-primary btn-sm">Create Post</a> 
+                   <a href="{{url('/news/create')}}" class="btn btn-success btn-sm btn-right">Create News</a>     
+    
                     <h3 class="text-center">Your Blog Posts</h3>
                     <table class="table table-striped">
                         <tr>
@@ -35,6 +37,30 @@
                             </tr>
                         @endforeach
                     </table>
+                    <!--NEWS TABLE-->
+                        <h3 class="text-center">Your News Feed</h3>
+                    <table class="table table-striped">
+                        <tr>
+                            <td>Title</td>
+                            <td> </td>
+                            <td> </td>
+                        </tr>
+                        @foreach ($contents as $content)
+                            <tr>
+                            <td>{{$content->title}}</th>
+                                <td><a href="/news/{{$content->id}}/edit" class="btn btn-default btn-sm">Edit</a></td>
+                                <td>
+                                    {!! Form::open(['action'=>['ContentsController@destroy', $content->id],'method'=>'POST', 'class' => 'pull-right']) !!}
+                                        {{Form::hidden('_method','DELETE')}}
+                                        {{Form::submit('Delete',['class'=>'btn btn-danger btn-sm'])}}
+                                    {!! Form::close() !!}
+                                </td>
+
+                            </tr>
+                        @endforeach
+                    </table>
+
+                    <!-- END NEWS TABLE-->
                 </div>
             </div>
         </div>
